@@ -10,4 +10,4 @@ curl -L -o tmp/$SDL2_DMG https://www.libsdl.org/release/$SDL2_DMG
 hdiutil attach tmp/$SDL2_DMG
 cp -R /Volumes/SDL2/$SDL2_FRAMEWORK ./tmp/
 hdiutil detach /Volumes/SDL2
-
+ls tmp/
