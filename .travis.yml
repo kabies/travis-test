@@ -1,9 +1,15 @@
 sudo: false
 matrix:
   include:
-    - os: osx
-      osx_image: xcode9.2
-      env:
-        - CC="gcc-7"
+    - os: linux
+      addons:
+        apt:
+          packages:
+            - libsdl2-dev
+            - libglew-dev
+before_script:
+  - if [ $TRAVIS_OS_NAME = linux ]; then export DISPLAY=:99.0;         fi
+  - if [ $TRAVIS_OS_NAME = linux ]; then sh -e /etc/init.d/xvfb start; fi
+  - if [ $TRAVIS_OS_NAME = linux ]; then sleep 3;                      fi
 script:
   - "sh sdl.sh"
