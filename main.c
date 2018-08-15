@@ -1,5 +1,5 @@
 #include <SDL.h>
-#include <GL/GLEW.h>
+#include <GL/glew.h>
 
 int main()
 {
