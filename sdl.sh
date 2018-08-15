@@ -4,5 +4,5 @@ echo "sdl.sh start"
 pwd
 whoami
 
-gcc main.c `sdl2-config --cflags --libs` -lGLEW
+gcc main.c `sdl2-config --cflags --libs` -lGLEW -lGL
 ./a.out
